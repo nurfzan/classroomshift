@@ -34,6 +34,7 @@ export default {
       },
       { rel: "stylesheet", href: "/assets/css/style.css" },
       { rel: "stylesheet", href: "/assets/css/components.css" },
+      { rel: "stylesheet", href: "/assets/css/custom.css" },
       { rel: "stylesheet", href: "/assets/css/spinkit.css" }
     ],
     script: [
@@ -70,14 +71,15 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ["@nuxtjs/moment"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
+    "nuxt-sweetalert2"
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

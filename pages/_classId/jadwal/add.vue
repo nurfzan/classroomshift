@@ -1,0 +1,3 @@
+<template>
+  <schedule-detail />
+</template>
