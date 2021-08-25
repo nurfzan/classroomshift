@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-9">
       <select :required="!noRequired" :disabled="disabled" :readonly="disabled" v-model="data" class="custom-select">
-        <option selected disabled value="">-choose one-</option>
+        <option selected disabled value="">- Pilih salah satu-</option>
         <option v-for="(option,i) in options" :key="i" :value="option.id">{{option.value}}</option>
       </select>
     </div>

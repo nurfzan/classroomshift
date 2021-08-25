@@ -1,4 +1,5 @@
 export default {
+  // ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "classroom",
@@ -21,17 +22,6 @@ export default {
         type: "text/css",
         href: "https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       },
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"
-      },
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href:
-          "https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css"
-      },
       { rel: "stylesheet", href: "/assets/css/style.css" },
       { rel: "stylesheet", href: "/assets/css/components.css" },
       { rel: "stylesheet", href: "/assets/css/custom.css" },
@@ -39,11 +29,6 @@ export default {
     ],
     script: [
       { src: "https://code.jquery.com/jquery-3.3.1.min.js" },
-      { src: "https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js" },
-      {
-        src:
-          "https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"
-      },
       {
         src:
           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -56,6 +41,10 @@ export default {
         src:
           "https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"
       },
+      {
+        src:
+          "https://unpkg.com/vue-qrcode-reader@3.0.3/dist/VueQrcodeReader.umd.min.js"
+      },
       { src: "/assets/js/stisla.js" },
       { src: "/assets/js/scripts.js" }
     ]
@@ -65,7 +54,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/vueQRCode.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -79,8 +68,11 @@ export default {
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
-    "nuxt-sweetalert2"
+    "vue-sweetalert2/nuxt"
   ],
+  sweetalert: {
+    confirmButtonColor: "#f6b93b"
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

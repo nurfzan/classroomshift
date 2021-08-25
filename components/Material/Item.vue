@@ -1,10 +1,7 @@
 <template>
-  <div class="card rounded shadow-sm">
+  <nuxt-link :to="`/${$route.params.classId}/jadwal?materi=${id}`" class="card rounded shadow-sm text-decoration-none">
     <div class="card-body">
       <div class="row border-black border-bottom">
-        <div class="col-1 border-right border-black">
-          <img :src="img" alt="" srcset="/icon.png" class="w-100">
-        </div>
         <div class="col">
           <h6 class="p-0 m-0">{{title}} : {{type}}</h6>
           <p class="p-0 m-0">{{$moment(schedule).format("DD MMMM")}}</p>
@@ -18,17 +15,21 @@
         </div>
       </div>
       <div class="container mt-3">
-        <i class="fas fa-file-download" style="font-size:3em"></i>
+        <a :href="file" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-download" style="font-size:3em"></i>
+        </a>
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 <script>
 export default {
   props: {
+    id: { type: String, default: "materi-id" },
     type: { type: String, default: "Materi" },
     title: { type: String, default: "Judul Jadwal" },
     schedule: { type: String, default: "2021-12-24" },
+    file: String,
     img: String,
   },
 };

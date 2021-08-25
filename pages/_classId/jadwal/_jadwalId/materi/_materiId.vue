@@ -1,0 +1,3 @@
+<template>
+  <material-detail />
+</template>

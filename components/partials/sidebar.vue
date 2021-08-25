@@ -22,7 +22,9 @@ export default {
   data() {
     return {
       menus: [
-        { icon: "fab fa-dashcube", name: "All Class", link: "/" },
+        { icon: "fab fa-dashcube", name: "Semua Kelas", link: "/" },
+        { icon: "far fa-bookmark", name: "Kelasku", link: "/kelasku" },
+        { icon: "far fa-id-badge", name: "Presensi", link: "/presensi" },
       ],
     };
   },

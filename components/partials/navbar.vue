@@ -3,7 +3,9 @@
     <div class="navbar-bg"></div>
     <nav class="navbar navbar-expand-lg main-navbar ">
       <div class="w-100 d-flex justify-content-between">
-        <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a>
+        <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i>
+          <h5 class="d-inline ml-4">Fullstack Academy</h5>
+        </a>
         <ul v-if="$route.params.classId" class="navbar-nav">
           <li class="nav-item ">
             <nuxt-link class="nav-link" :to="`/${$route.params.classId}/kelas`">Kelas</nuxt-link>
